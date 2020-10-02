@@ -35,7 +35,7 @@ namespace grasp.strings
             var player1Number = 23;
 
             string player2 = "Lebron James";
-            short player2Number = 23;
+            byte player2Number = 23;
 
             WriteLine("Player: " + player1 + " has number: " + player1Number);
             WriteLine("Player: {0} has number: {1}", player2, player2Number);
