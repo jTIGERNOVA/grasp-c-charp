@@ -26,6 +26,12 @@ namespace grasp.strings
             WriteLine();
         }
 
+        public bool Equals(object obj)
+        {
+            return false;
+        }
+
+
         /// <summary>
         /// Prints strings with the use of variables
         /// </summary>
