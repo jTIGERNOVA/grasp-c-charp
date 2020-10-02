@@ -82,7 +82,7 @@ namespace grasp.events_and_delegates
         {
             var usingDelegates = new UsingDelegates();
 
-            usingDelegates.Simple((string message) => WriteLine(message));
+            usingDelegates.Simple((int id, string message) => WriteLine(message));
 
             usingDelegates.Simple(AnotherPrintMessage);
         }
@@ -97,10 +97,12 @@ namespace grasp.events_and_delegates
             WriteLine($"EVENT-3... A detailed pass was thrown at a speed of {args.BallSpeed}m/s");
         }
 
-        static void AnotherPrintMessage(string message)
+        static bool AnotherPrintMessage(string message)
         {
             WriteLine("A custom delegate");
             WriteLine(message);
+
+            return true;//message was printed so let's return true
         }
     }
 }
