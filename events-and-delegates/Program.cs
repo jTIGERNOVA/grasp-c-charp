@@ -4,6 +4,35 @@ using static System.Console;
 
 namespace grasp.events_and_delegates
 {
+    /// <summary>
+    /// Delegates and events in C# are very similar.
+    /// Both delegates and events offer a late binding scenario: 
+    /// they enable scenarios where a component communicates by calling a method that is 
+    /// only known at runtime. They both support single and multiple subscriber methods. 
+    /// You may find this referred to as singlecast and multicast support. 
+    /// They both support similar syntax for adding and removing handlers. 
+    /// Finally, raising an event and calling a delegate use exactly the same method call syntax. 
+    /// They even both support the same Invoke() method syntax for use with the ?. operator.
+    /// 
+    /// **
+    /// The most important consideration in determining which language feature 
+    /// to use is whether or not there must be an attached subscriber. 
+    /// If your code must call the code supplied by the subscriber, 
+    /// you should use a design based on delegates when you need to implement callback. 
+    /// If your code can complete all its work without calling any subscribers, 
+    /// you should use a design based on events.
+    /// 
+    /// **
+    /// Another consideration is the method prototype you would want for your delegate method. 
+    /// As you've seen, the delegates used for events all have a void return type.
+    /// 
+    /// Classes other than the one in which an event is contained can only add and 
+    /// remove event listeners; only the class containing the event can invoke the event. 
+    /// Events are typically public class members. By comparison, delegates are 
+    /// often passed as parameters and stored as private class members, if they are stored at all.
+    /// 
+    /// Within C# UI frameworks, you will see events used over delegates.
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
