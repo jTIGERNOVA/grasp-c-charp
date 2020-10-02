@@ -2,4 +2,4 @@
 Learning C# in a practical way
 
 # Requirements
-Visual Studio
+Visual Studio (best) OR any text editor
