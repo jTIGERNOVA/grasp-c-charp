@@ -74,6 +74,10 @@ namespace grasp.events_and_delegates
             usingEvents.Pass += OnPass;
             usingEvents.Pass += onPassEventHandler;
             usingEvents.PassDetailed += OnPassDetailed;
+            usingEvents.PassDetailed += (object sender, PassArgs args) =>
+            {
+                WriteLine($"Anonymous event handler with data: {args.BallSpeed}");
+            };
 
             //events are triggered
             usingEvents.PassTheBall(ballSpeed);
