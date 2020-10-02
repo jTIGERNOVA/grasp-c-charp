@@ -46,6 +46,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsingDelegates.cs" />
+    <Compile Include="UsingEvents.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

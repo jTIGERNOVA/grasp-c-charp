@@ -9,7 +9,7 @@ namespace grasp.events_and_delegates
 
         public void Simple(PrintMessage printDelegate)
         {
-            WriteLine("--Simple--");
+            WriteLine("--UsingDelegates.Simple--");
             var myMessage = $"Message printed at {DateTime.Now:MM-dd-yyyy HH:mm:ss.fff}";
 
             if (printDelegate != null)
