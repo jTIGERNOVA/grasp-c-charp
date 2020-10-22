@@ -42,6 +42,7 @@ namespace Searching
             /// <returns></returns>
             public int InterpolationSearch(int[] arr, int search)
             {
+                throw new NotImplementedException();
                 return Find(arr: arr, startIdx: 0, endIdx: arr.Length - 1, search: search);
             }
 
